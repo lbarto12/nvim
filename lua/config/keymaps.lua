@@ -17,3 +17,8 @@ vim.keymap.set("n", "<CR>", "o<Esc>", { noremap = true })
 vim.keymap.set("n", "<leader>ot", function()
   vim.fn.jobstart({ "xdg-terminal-exec" }, { cwd = vim.fn.getcwd(), detach = true })
 end, { desc = "Open terminal in CWD" })
+
+-- Replace usages of identifier
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {
+  desc = "LSP Rename variable",
+})
