@@ -18,3 +18,7 @@ vim.api.nvim_create_autocmd("BufReadCmd", {
     vim.cmd("bwipeout")
   end,
 })
+
+vim.filetype.add({
+  extension = { tpp = "cpp" },
+})
